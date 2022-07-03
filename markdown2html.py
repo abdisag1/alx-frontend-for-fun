@@ -13,5 +13,5 @@ if __name__ == '__main__':
     markdown = sys.argv[1]
     markdownfile = os.path.exists(markdown)
     if(markdownfile == False):
-        print(f'missing {markdown}')
+        print(f'missing {markdown}',file=sys.stderr)
         exit(1)
