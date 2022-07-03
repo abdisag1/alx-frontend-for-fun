@@ -15,10 +15,9 @@ if __name__ == '__main__':
     htmlfile = sys.argv[2]
     markdownfile = os.path.exists(markdownfile)
     if(markdownfile == False):
-        print(f'missing {markdownfile}',file=sys.stderr)
+        print(f'missing {markdownfile}', file=sys.stderr)
         exit(1)
-    
-    
+
     with open(sys.argv[1], 'r') as f:
         text = f.read()
         html = markdown.markdown(text)
