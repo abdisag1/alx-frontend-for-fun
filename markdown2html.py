@@ -13,7 +13,7 @@ if __name__ == '__main__':
         exit(1)
     markdownfile = sys.argv[1]
     htmlfile = sys.argv[2]
-    markdownfile = os.path.exists(markdownfile)
+    markdownfile = os.path.exists(markdownfile) and os.path.isfile(markdownfile)
     if(markdownfile == False):
         print(f'missing {markdownfile}', file=sys.stderr)
         exit(1)
